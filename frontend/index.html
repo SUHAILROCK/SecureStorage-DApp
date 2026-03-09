@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SecureStorage DApp</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>SecureStorage</h1>
+      <p class="subtitle">Store and verify document hashes on blockchain</p>
+
+      <button id="connectBtn">Connect MetaMask</button>
+      <p id="walletStatus">Wallet not connected</p>
+
+      <label for="fileInput">Upload File to Generate Hash</label>
+      <input
+        id="fileInput"
+        type="file"
+      />
+      <p id="generatedHashDisplay" style="word-break: break-all; margin: 10px 0; font-family: monospace; font-size: 1.1em; color: #333; cursor: pointer; padding: 10px; background: #f5f5f5; border-radius: 4px; display: none;" title="Click to copy" onclick="navigator.clipboard.writeText(this.innerText); alert('Hash copied to clipboard!');"></p>
+
+      <label for="hashInput">Or Enter Document Hash Manually</label>
+      <input
+        id="hashInput"
+        type="text"
+        placeholder="Enter SHA-256/IPFS/document hash"
+      />
+
+      <div class="actions">
+        <button id="storeBtn">Store Hash</button>
+        <button id="verifyBtn">Verify Hash</button>
+      </div>
+
+      <p id="result">Result will appear here</p>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.2/dist/ethers.umd.min.js"></script>
+    <script src="app.js?v=2"></script>
+  </body>
+</html>

@@ -19,7 +19,7 @@
         id="fileInput"
         type="file"
       />
-      <p id="generatedHashDisplay" style="word-break: break-all; margin: 10px 0; font-family: monospace; font-size: 1.1em; color: #333; cursor: pointer; padding: 10px; background: #f5f5f5; border-radius: 4px; display: none;" title="Click to copy" onclick="navigator.clipboard.writeText(this.innerText); alert('Hash copied to clipboard!');"></p>
+      <p id="generatedHashDisplay" style="word-break: break-all; margin: 10px 0; font-family: monospace; font-size: 1.1em; color: #333; cursor: pointer; padding: 10px; background: #f5f5f5; border-radius: 4px; display: none;" title="Click to copy" onclick="navigator.clipboard.writeText(this.textContent); alert('Hash copied to clipboard!');"></p>
 
       <label for="hashInput">Or Enter Document Hash Manually</label>
       <input
